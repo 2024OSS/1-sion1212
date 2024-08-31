@@ -6,45 +6,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            font: 100% Lucida, Verdana;
+            margin: 20px;
+            line-height: 26px;
+        }
+
         #top {
-            background-color: green;
+            background-color: #04AA6D;
+            border-radius: 5px;
+            padding: 15px;
+            padding-left: 0;
         }
 
-        
-        #menugroup{
+        #main {
+            position: relative;
+            overflow: auto;
+        }
+
+        #menugroup {
+            width: 200px;
             float: left;
+            margin: 0;
+            padding-left: 0;
         }
 
-        #main{
+        #center {
+            float: left;
+            width: 40%;
+            height: 100%;
+            margin-left: 10px;
+            margin-right: 10px;
+            overflow: auto;
+        }
+
+        #sidebar {
+            background-color: #32a4ef;
+            color: #ffffff;
             padding: 10px;
-            margin: 0 210px;
+            border-radius: 5px;
+            width: 180px;
+            bottom: 0;
+            top: 0;
+            right: 0;
+            position: absolute;
+        }
+
+        #bottom {
+            background-color: #f1f1f1;
+            text-align: center;
+            font-size: 70%;
+            line-height: 14px;
+            padding: 5px;
         }
 
         .white {
             color: white;
+            margin: 0;
+            padding-left: 20px;
         }
 
-        .padding0 {
-            padding: 0;
+        #top_h1{
+            padding-top: 10px;
         }
 
-        .mitem{
+        .mitem {
             background-color: #f1f1f1;
             border: 1px solid #d4d4d4;
+            border-radius: 5px;
             list-style-type: none;
             padding: 2px;
-            cursor: pointer;
+            margin: 2px;
+        }
+
+        @media(max-width: 600px){
+            #menubar{
+                width: auto;
+                position: relative;
+            }
+
+            #main{
+                margin-right: 0;
+            }
         }
     </style>
 </head>
 
 <body>
     <div id="top">
-        <h1 class="white">Welcome to My Homepage</h1>
+        <h1 class="white", id="top_h1">Welcome to My Homepage</h1>
         <p class="white">Use the menu to select different Stylesheets</p>
     </div>
 
-    <div id="menu">
+    <div id="main">
         <ul id="menugroup">
             <li class="mitem">Stylesheet 1</li>
             <li class="mitem">Stylesheet 2</li>
@@ -52,46 +106,55 @@
             <li class="mitem">Stylesheet 4</li>
             <li class="mitem">No Stylesheet</li>
         </ul>
+
+        <div id="center">
+            <h1>Same Page Different Stylesheets</h1>
+
+            <p>
+                This is a demonstration of how different stylesheets can change the layout of your HTML page. You can
+                change
+                the
+                layout of this page by selecting different stylesheets in the menu, or by selecting one of the following
+                links:<br />
+                <a href="style1.html">Stylesheet1</a>, <a href="style2.html">Stylesheet2</a>, <a
+                    href="style3.html">Stylesheet3</a>, <a href="style4.html">Stylesheet4</a>.
+            </p>
+
+            <h2>No Styles</h2>
+
+            <p>
+                This page uses DIV elements to group different sections of the HTML page. Click here to see how the page
+                looks like
+                with no stylesheet:
+                <a href="nostyle.html">No Stylesheet</a>.
+            </p>
+        </div>
+
+        <div id="sidebar">
+            <h3>Side-Bar</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                laoreet
+                dolore
+                magna aliquam erat volutpat.
+            </p>
+        </div>
     </div>
 
-    <div id="main">
-        <h1>Same Page Different Stylesheets</h1>
-
+    <div id="bottom">
         <p>
-            This is a demonstration of how different stylesheets can change the layout of your HTML page. You can change
-            the
-            layout of this page by selecting different stylesheets in the menu, or by selecting one of the following
-            links:<br />
-            <a href="style1.html">Stylesheet1</a>, <a href="style2.html">Stylesheet2</a>, <a
-                href="style3.html">Stylesheet3</a>, <a href="style4.html">Stylesheet4</a>.
-        </p>
-
-        <h2>No Styles</h2>
-        
-        <p>
-            This page uses DIV elements to group different sections of the HTML page. Click here to see how the page
-            looks like
-            with no stylesheet:
-            <a href="nostyle.html">No Stylesheet</a>.
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+            dolore
+            magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+            lobortis
+            nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit
+            esse
+            molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
+            dignissim
+            qui
+            blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
         </p>
     </div>
-
-    <h3>Side-Bar</h3>
-    <p>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-        dolore
-        magna aliquam erat volutpat.
-    </p>
-    <p>
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-        dolore
-        magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-        lobortis
-        nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
-        molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
-        qui
-        blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-    </p>
 </body>
 
 </html>
