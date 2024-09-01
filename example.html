@@ -1,11 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .divider{
+            background-color: rgb(0, 0, 0,.1);
+            border: solid rgba(0, 0, 0, 0.15);
+            border-width: 1px;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+            width: 100%;
+            height: 3rem;
+        }
+
+        #header1{
+            border-bottom: solid 0.8px rgba(0, 0, 0, .1);
+            border-color: rgb(182, 182, 182);   
+            margin: auto;
+            margin-bottom: 24px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            position: relative;
+            overflow: auto;
+            width: 70%;
+        }
+
+        #image{
+            float: left;
+        }
+
+        #title{
+            float: left;
+            margin: 0;
+        }
+
+        #menu{
+            float: right;
+            list-style: none;
+        }
+
+        .menuitem{
+            display: inline;
+            font-size: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .menuitem-link{
+            color: #1667fc;
+            text-decoration-line: none;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div>
+        <header id="header1">
+            <svg id="image" width="45" height="50">
+                <rect x="0" y="0" rx="5" ry="5" width="40" height="40"
+                style="fill:black" />
+                <text fill="#ffffff" font-size="30" x="11" y="31">B</text>
+            </svg>
+
+            <h1 id="title">Unique Header for SION!</h1>
+
+            <ul id="menu">
+                <li class="menuitem">
+                    <a href="nostyle.html" class="menuitem-link">Home</a>
+                </li>
+                <li class="menuitem">
+                    <a href="nostyle.html" class="menuitem-link">Features</a>
+                </li>
+                <li class="menuitem">
+                    <a href="nostyle.html" class="menuitem-link">Pricing</a>
+                </li>
+                <li class="menuitem">
+                    <a href="nostyle.html" class="menuitem-link">FAQs</a>
+                </li>
+                <li class="menuitem">
+                    <a href="nostyle.html" class="menuitem-link">About</a>
+                </li>
+            </ul>
+        </header>
+    </div>
+    <div class="divider"></div>
 </body>
+
 </html>
